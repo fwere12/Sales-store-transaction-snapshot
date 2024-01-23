@@ -1,0 +1,25 @@
+#Importing the necessary libraries
+
+import numpy as np 
+import pandas as pd 
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import LabelEncoder
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score
+import pickle as pk
+
+#uploading our dataset into the workspace
+df = pd.read_csv("C:/Users/Faith/Downloads/SalesStore.csv")
+df.head(5)
+*Output*
+
+Order_Date	Ship_Date	Ship_Mode	Postal_Code	Region	Product_Reference	Category	Sub_Category	Sales	Quantity	Profit	State
+0	2021-02-15	2021-02-20	Ground	44104	Midwest	OFF-TAP-10022901	Office Supplies	Tape	5	1	0.15	OH
+1	2021-02-15	2021-02-20	Ground	44104	Midwest	OFF-TAP-10023012	Office Supplies	Tape	5	1	0.15	OH
+2	2021-02-15	2021-02-20	Ground	44104	Midwest	OFF-TAP-10002828	Office Supplies	Tape	5	1	0.15	OH
+3	2021-02-15	2021-02-20	Ground	44104	Midwest	OFF-TAP-10022901	Office Supplies	Tape	5	1	0.15	OH
+4	2021-02-15	2021-02-20	Ground	44104	Midwest	OFF-TAP-10000482	Office Supplies	Tape	5	1	0.15	OH
